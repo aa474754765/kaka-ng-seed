@@ -4,10 +4,12 @@ import { LayoutsModule } from '../layouts/layouts.module';
 import { PagesRoutingModule } from './pages-routing.module';
 import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const components = [
   PagesComponent,
-  DashboardComponent
+  DashboardComponent,
+  NotFoundComponent
 ];
 
 @NgModule({

@@ -3,28 +3,30 @@ import { NgModule } from '@angular/core';
 
 import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
   {
     path: '',
     component: PagesComponent,
+    // redirectTo: 'home/dashboard',
     children: [
       {
         path: 'dashboard',
         component: DashboardComponent
-      }
+      },
       // {
       //   path: 'json',
       //   component: JsonComponent
       // },
-      // {
-      //   path: '',
-      //   redirectTo: 'users',
-      //   pathMatch: 'full',
-      // }, {
-      //   path: '**',
-      //   component: NotFoundComponent,
-      // }
+      {
+        path: '',
+        redirectTo: 'dashboard',
+        pathMatch: 'full',
+      }, {
+        path: '**',
+        component: NotFoundComponent,
+      }
     ]
   }
 ];
