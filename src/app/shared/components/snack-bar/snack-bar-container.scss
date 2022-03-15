@@ -1,0 +1,62 @@
+@import '../../../../assets/styles/colors.scss';
+
+$padding: 14px 16px !default;
+$min-height: 48px !default;
+$min-width: 240px !default;
+$max-width: 33vw !default;
+$spacing-margin: 24px !default;
+$spacing-margin-handset: 8px !default;
+
+@mixin snack-info {
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+
+@mixin snack-success {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+
+@mixin snack-danger {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+
+@mixin snack-warning {
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+}
+
+
+.snack-bar-container {
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: block;
+  margin: $spacing-margin;
+  max-width: $max-width;
+  min-width: $min-width;
+  padding: $padding;
+  min-height: $min-height;
+  transform-origin: center;
+  @include snack-info;
+
+  &.snack-bar-success {
+    @include snack-success;
+  }
+
+  &.snack-bar-info {
+    @include snack-info;
+  }
+
+  &.snack-bar-warning {
+    @include snack-warning;
+  }
+
+  &.snack-bar-danger {
+    @include snack-danger;
+  }
+}
