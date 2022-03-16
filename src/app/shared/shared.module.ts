@@ -4,6 +4,7 @@ import { OverlayModule } from '@angular/cdk/overlay';
 import { PortalModule } from '@angular/cdk/portal';
 
 import { SnackBarContainer } from './components/snack-bar/snack-bar-container';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   imports: [
@@ -12,7 +13,8 @@ import { SnackBarContainer } from './components/snack-bar/snack-bar-container';
     PortalModule
   ],
   declarations: [
-    SnackBarContainer
+    SnackBarContainer,
+    NotFoundComponent
   ],
   exports: [
     SnackBarContainer
