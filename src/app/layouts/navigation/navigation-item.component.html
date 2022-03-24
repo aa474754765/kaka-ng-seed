@@ -1,0 +1,22 @@
+<!--
+ * @Author: kaka
+ * @Date: 2022-02-21 18:55:23
+ * @LastEditors: kaka
+ * @LastEditTime: 2022-03-24 23:03:22
+-->
+<div *ngIf="nodeChildren.length === 0">
+    <a class="nav-item" [ngClass]="classes" [routerLink]="[menuItem.url]">
+        <span>{{menuItem.title}}</span>
+    </a>
+</div>
+
+<div *ngIf="nodeChildren.length > 0">
+    <a class="nav-item" [ngClass]="classes" (click)="isExpanded = !isExpanded">
+        <span>{{menuItem.title}}</span>
+        <mat-icon>{{isExpanded ? 'keyboard_arrow_down' : 'keyboard_arrow_right'}}</mat-icon>
+    </a>
+    <ng-container *ngIf="isExpanded">
+        <kaka-navigation-item *ngFor="let node of nodeChildren" [menuItem]="node" [level]="level + 1">
+        </kaka-navigation-item>
+    </ng-container>
+</div>

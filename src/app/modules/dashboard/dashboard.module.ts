@@ -9,11 +9,13 @@ import { CommonModule } from '@angular/common';
 
 import { OverviewComponent } from './overview/overview.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
+import { NewsComponent } from './news/news.component';
 
 
 @NgModule({
   declarations: [
-    OverviewComponent
+    OverviewComponent,
+    NewsComponent
   ],
   imports: [
     CommonModule,

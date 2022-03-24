@@ -2,21 +2,28 @@
  * @Author: kaka
  * @Date: 2022-03-16 18:08:30
  * @LastEditors: kaka
- * @LastEditTime: 2022-03-16 18:24:47
+ * @LastEditTime: 2022-03-24 23:12:43
  */
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
+
 import { JsonComponent } from './json/json.component';
+import { EncodeDecodeComponent } from './encode-decode/encode-decode.component';
 
 const routes: Routes = [
   {
-    path: 'json',
-    component: JsonComponent,
-  },
-  {
     path: '',
-    redirectTo: 'json',
-    pathMatch: 'full',
+    component: JsonComponent,
+    children: [
+      {
+        path: 'json',
+        component: JsonComponent,
+      },
+      {
+        path: 'urlencode',
+        component: EncodeDecodeComponent,
+      }
+    ]
   },
   {
     path: '**',

@@ -1,0 +1,40 @@
+@import "/src/assets/styles/colors.scss";
+
+.nav-item {
+    line-height: 2.8rem;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow-wrap: break-word;
+    padding: 8px;
+    text-decoration: none;
+    text-align: left;
+    width: 100%;
+    word-wrap: break-word;
+
+    &:hover {
+        cursor: pointer;
+        background-color: $offwhite;
+    }
+
+    &.level-1 {
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+        padding-left: 20px;
+    }
+
+    &.level-2 {
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+        padding-left: 36px;
+    }
+
+    &.level-3 {
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+        padding-left: 44px;
+    }
+
+}

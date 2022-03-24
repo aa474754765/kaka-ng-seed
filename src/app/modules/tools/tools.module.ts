@@ -8,11 +8,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ToolsRoutingModule } from './tools-routing.module';
 import { JsonComponent } from './json/json.component';
+import { EncodeDecodeComponent } from './encode-decode/encode-decode.component';
 
 
 @NgModule({
   declarations: [
-    JsonComponent
+    JsonComponent,
+    EncodeDecodeComponent
   ],
   imports: [
     CommonModule,
