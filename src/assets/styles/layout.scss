@@ -1,7 +1,6 @@
 @import "./colors.scss";
 
 $toorbar-height: 56px;
-$background-color: $blue;
 
 .app {
   display: flex;
@@ -34,8 +33,6 @@ mat-toolbar.app-toolbar {
   right: 0;
   left: 0;
   z-index: 10;
-  background-color: $background-color;
-  color: $white;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
 
   ul {

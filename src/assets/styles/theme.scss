@@ -1,0 +1,32 @@
+@import "./colors.scss";
+
+@mixin text-color($color, $background-color) {
+    p,
+    h1,
+    div,
+    a,
+    span,
+    .app-toolbar,
+    .mat-sidenav-content {
+        color: $color;
+        background-color: $background-color;
+    }
+}
+
+.primary-theme {
+    @include text-color($black, inherit);
+
+    .app-toolbar {
+        background-color: $blue;
+        @include text-color($white, inherit);
+    }
+}
+
+.dark-theme {
+    @include text-color($white, $darkgray);
+
+    .app-toolbar {
+        background-color: $blue;
+        @include text-color($white, inherit);
+    }
+}
