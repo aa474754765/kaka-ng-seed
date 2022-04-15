@@ -14,12 +14,13 @@ export const APP_MENU_TOKEN = new InjectionToken<NavigationNode[]>('app_menu')
 @Injectable()
 export class NavigationService {
 
-  navigationNodes: NavigationNode[];
+  topMenuNodes: NavigationNode[];
 
   currentNodes$: Observable<NavigationNode[]>;
 
   constructor(@Inject(APP_MENU_TOKEN) private appMenu: NavigationNode[], private locationService: LocationService) {
     this.currentNodes$ = this.getCurrentNodes(this.appMenu);
+    this.topMenuNodes = this.appMenu;
   }
 
   private getCurrentNodes(appMenu: NavigationNode[]): Observable<NavigationNode[]> {

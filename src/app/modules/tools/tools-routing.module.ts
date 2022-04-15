@@ -13,7 +13,6 @@ import { EncodeDecodeComponent } from './encode-decode/encode-decode.component';
 const routes: Routes = [
   {
     path: '',
-    component: JsonComponent,
     children: [
       {
         path: 'json',
